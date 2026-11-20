@@ -154,3 +154,26 @@
     try { localStorage.setItem("theme", dark ? "silver" : "pink"); } catch (e) {}
   });
 })();
+
+/* Project reveal: hover with a mouse, tap on touch screens */
+(() => {
+  document.querySelectorAll(".project-preview").forEach((preview) => {
+    const wheel = preview.querySelector(".tools-wheel");
+    if (!wheel) return;
+
+    [...wheel.children].forEach((li, i) => {
+      li.style.setProperty("--i", i);
+      li.style.setProperty("--n", wheel.children.length);
+    });
+
+    preview.addEventListener("pointerenter", (e) => {
+      if (e.pointerType === "mouse") preview.classList.add("is-open");
+    });
+    preview.addEventListener("pointerleave", (e) => {
+      if (e.pointerType === "mouse") preview.classList.remove("is-open");
+    });
+    preview.addEventListener("click", (e) => {
+      if (e.pointerType === "touch" || e.pointerType === "pen") preview.classList.toggle("is-open");
+    });
+  });
+})();
