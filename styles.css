@@ -368,30 +368,6 @@ a[aria-disabled="true"] { cursor: default; }
 .portrait-placeholder, .portrait-photo { position: absolute; inset: 0; width: 100%; height: 100%; }
 .portrait-photo { object-fit: cover; object-position: center; }
 .portrait-placeholder span { position: absolute; left: 50%; translate: -50% 0; }
-.silhouette-body {
-  top: 29%;
-  width: 50%;
-  height: 55%;
-  border-radius: 52% 52% 23% 23%;
-  background: linear-gradient(160deg, #6245668c, #876b8e72);
-}
-
-.silhouette-hair {
-  top: 16.5%;
-  width: 33%;
-  height: 30%;
-  border-radius: 49% 48% 46% 47%;
-  background: linear-gradient(145deg, #503f5f, #75546e);
-}
-
-.silhouette-face {
-  top: 20.7%;
-  width: 21%;
-  height: 21.5%;
-  border-radius: 49% 48% 43% 44%;
-  background: linear-gradient(145deg, #a76650, #824b3d);
-  box-shadow: 0 2px 0 #644052;
-}
 
 .portrait figcaption {
   position: absolute;
@@ -1311,4 +1287,214 @@ html { scroll-behavior: smooth; }
   color: var(--muted);
   font-size: 0.72rem;
   font-weight: 500;
+}
+
+
+
+
+
+
+
+
+/* ---------- Theme toggle button ---------- */
+.brand { gap: 10px; }
+.brand a { font-size: 0.9rem; font-weight: 700; }
+.brand a { color: var(--ink); }
+:root[data-theme="silver"] .brand a { color: #f4f2f4; }
+
+.theme-toggle {
+  position: relative;
+  flex: none;
+  width: 52px;
+  height: 28px;
+  padding: 0;
+  border: 1px solid #ffffffb3;
+  border-radius: 999px;
+  cursor: pointer;
+  background: linear-gradient(145deg, #e681b1, var(--rose));
+  box-shadow: inset 0 1px 2px #ffffff59, 0 6px 18px #b8468136;
+  transition: background 0.35s ease, border-color 0.35s ease;
+}
+.theme-thumb {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  display: grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #fff;
+  color: #b84681;
+  font-size: 0.68rem;
+  box-shadow: 0 2px 6px #0003;
+  transition: translate 0.35s cubic-bezier(0.5, 1.4, 0.5, 1), background 0.35s ease, color 0.35s ease;
+}
+.thumb-moon { display: none; }
+
+:root[data-theme="silver"] .theme-toggle {
+  background: linear-gradient(145deg, #3a393e, #0f0f12);
+  border-color: #ffffff40;
+  box-shadow: inset 0 1px 1px #ffffff26, 0 6px 16px #00000040;
+}
+:root[data-theme="silver"] .theme-thumb {
+  translate: 24px 0;
+  background: #f1eff1;
+  color: #17161a;
+}
+:root[data-theme="silver"] .thumb-sun { display: none; }
+:root[data-theme="silver"] .thumb-moon { display: inline; }
+
+:root[data-theme="silver"] body {
+  background: linear-gradient(160deg, #f6f4f4, #e7e4e5 52%, #efecec);
+
+}
+
+/* hero background: soft silver mesh (swap in a grayscale photo if you like) */
+:root[data-theme="silver"] .stage {
+  background:
+    url("images/hero-silver1.jpg") center / cover no-repeat,
+    linear-gradient(135deg, #ece9ea, #d8d4d6);
+}
+
+/* Silver theme: dark translucent hero */
+:root[data-theme="silver"] .hero {
+  background: linear-gradient(145deg, #1a191dc7, #0b0b0eb0);
+  border: 1px solid #ffffff2e;
+  backdrop-filter: blur(5px) saturate(1);
+  -webkit-backdrop-filter: blur(5px) saturate(1);
+  box-shadow: inset 0 1px 1px #ffffff26, 0 24px 60px #00000040;
+}
+
+/* dark glass for the name pill and availability pill */
+:root[data-theme="silver"] .brand,
+:root[data-theme="silver"] .availability {
+  background: linear-gradient(145deg, #1a191dc7, #0b0b0eb0);
+  border: 1px solid #ffffff2e;
+  backdrop-filter: blur(10px) saturate(1);
+  -webkit-backdrop-filter: blur(10px) saturate(1);
+  box-shadow: inset 0 1px 1px #ffffff26, 0 14px 34px #00000033;
+}
+:root[data-theme="silver"] .availability { color: #d6d2db; }
+
+/* text flips to light inside the dark hero */
+:root[data-theme="silver"] .hero .eyebrow { color: #a9a5ae; }
+:root[data-theme="silver"] .hero h1 { color: #f4f2f4; }
+:root[data-theme="silver"] .hero h1 span { color: #bdb8c2; }
+:root[data-theme="silver"] .hero-description { color: #c9c5ce; }
+:root[data-theme="silver"] .hero-facts { color: #b4b0b9; }
+:root[data-theme="silver"] .hero-facts li + li { border-left-color: #ffffff2e; }
+
+/* buttons: white pill primary, glass outline secondary */
+:root[data-theme="silver"] .hero .button-primary {
+  background: linear-gradient(145deg, #ffffff, #e4e1e4);
+  border-color: #ffffff;
+  color: #141417;
+  box-shadow: 0 12px 28px #00000040;
+}
+
+:root[data-theme="silver"] .hero .button-secondary {
+  background: #ffffff14;
+  border-color: #ffffff40;
+  color: #f4f2f4;
+  box-shadow: none;
+}
+
+:root[data-theme="silver"] .hero .button[href]:hover { background-color: #ffffff26; }
+
+:root[data-theme="silver"] .site-nav { background: linear-gradient(145deg, #ffffffe0, #ffffffa6); }
+
+
+/* nav: the active link becomes a dark pill */
+:root[data-theme="silver"] .site-nav a { color: #5d5961; }
+:root[data-theme="silver"] .site-nav a[aria-current="true"],
+:root[data-theme="silver"] .site-nav a[href]:hover {
+  border-color: #1b1a1e;
+  color: #fff;
+  background: linear-gradient(145deg, #2d2c31, #121215);
+  box-shadow: 0 6px 16px #00000033;
+}
+
+/* type */
+:root[data-theme="silver"] .eyebrow,
+:root[data-theme="silver"] .work-label,
+:root[data-theme="silver"] .section-label,
+:root[data-theme="silver"] .preview-label { color: #7b777f; }
+
+/* buttons: black pills */
+:root[data-theme="silver"] .button { border-radius: 999px; }
+:root[data-theme="silver"] .button-primary {
+  background: linear-gradient(145deg, #2d2c31, #101013);
+  border-color: #3b3a3f;
+  box-shadow: inset 0 1px 1px #ffffff30, 0 12px 26px #00000038;
+}
+:root[data-theme="silver"] .button-secondary {
+  background: #ffffffb3;
+  border-color: #ffffffe0;
+  box-shadow: 0 8px 20px #00000012;
+}
+
+/* portrait frame */
+:root[data-theme="silver"] .portrait {
+  background: linear-gradient(145deg, #ffffff, #d9d5d7 57%, #c4c0c4);
+  box-shadow: inset 0 0 0 2px #ffffffa6, inset 0 0 0 5px #ffffffd0, 0 25px 44px #00000026;
+}
+:root[data-theme="silver"] .portrait-glass {
+  background:
+    radial-gradient(ellipse at 34% 20%, #ffffffd9, transparent 28%),
+    linear-gradient(144deg, #e8e5e6 5%, #cfcbcd 58%, #bfbbbf 100%);
+}
+
+/* butterflies (CSS and 3D) turn silver */
+:root[data-theme="silver"] .butterfly,
+:root[data-theme="silver"] .butterfly-canvas { filter: grayscale(1) contrast(1.05); }
+
+/* projects */
+:root[data-theme="silver"] .project {
+  background: #ffffffa6;
+  border: 1px solid #ffffffe6;
+  box-shadow: 0 14px 38px #0000000f;
+}
+:root[data-theme="silver"] .preview-fred,
+:root[data-theme="silver"] .preview-studyhub,
+:root[data-theme="silver"] .preview-plow,
+:root[data-theme="silver"] .preview-myai,
+:root[data-theme="silver"] .preview-portfolio {
+  background: linear-gradient(135deg, #ebe8e9, #cdc9cb);
+}
+:root[data-theme="silver"] .mock-content span:last-child { background: linear-gradient(135deg, #d5d1d3, #aaa6aa); }
+:root[data-theme="silver"] .mock-tiles span { background: #ebe8e9; }
+:root[data-theme="silver"] .project-tags li,
+:root[data-theme="silver"] .about-skills li { border-color: #dcd8da; background: #ffffff8c; }
+:root[data-theme="silver"] .experience-row { border-color: #17161a22; }
+
+/* about */
+:root[data-theme="silver"] .about-panel {
+  background:
+    radial-gradient(circle at 105% -12%, #fff5 0 18%, #fff9 18.2% 18.5%, transparent 18.7%),
+    linear-gradient(135deg, #f3f1f1b8, #dedbdcd9);
+  box-shadow: 0 20px 50px #0000000f;
+}
+
+/* contact: graphite */
+:root[data-theme="silver"] .contact-panel {
+  background:
+    radial-gradient(ellipse at 15% 10%, #9a969d40, transparent 42%),
+    radial-gradient(ellipse at 96% 100%, #6c687080, transparent 42%),
+    #17161a;
+}
+:root[data-theme="silver"] .contact-panel .section-label { color: #bdb9c0; }
+:root[data-theme="silver"] .contact-panel h2 span,
+:root[data-theme="silver"] .contact-arrow { color: #d5d1d8; }
+:root[data-theme="silver"] .contact-panel a:focus-visible { outline-color: #d5d1d8; }
+
+/* avatar: silver accessories (optional) */
+:root[data-theme="silver"] .avatar-keyboard { background-color: #3a383d; box-shadow: 0 3px 0 #1d1c20; }
+:root[data-theme="silver"] .avatar-dress { background: linear-gradient(130deg, #f4f2f3, #d3cfd2 54%, #b9b5b9); }
+:root[data-theme="silver"] .avatar-bow::before,
+:root[data-theme="silver"] .avatar-bow::after { background: linear-gradient(145deg, #cfcbcf, #8f8b91); border-color: #f4f2f3; }
+:root[data-theme="silver"] .avatar-bow span { background: #a39fa5; border-color: #f4f2f3; }
+
+@media (prefers-reduced-motion: reduce) {
+  .theme-toggle, .theme-thumb { transition: none; }
 }

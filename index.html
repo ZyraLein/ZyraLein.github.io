@@ -10,7 +10,12 @@
 
     <title>Gloria Tetchouang | Portfolio</title>
 
-    <script>document.documentElement.classList.add("js");</script>
+    <script>
+      document.documentElement.classList.add("js");
+      try {
+        if (localStorage.getItem("theme") === "silver") document.documentElement.dataset.theme = "silver";
+      } catch (e) {}
+    </script>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,10 +36,15 @@
         <span class="bubble bubble-3" aria-hidden="true"></span>
 
         <header class="site-header">
-          <a class="brand" href="#home" aria-label="Gloria, home">
-            <span class="brand-mark" aria-hidden="true">GT</span>
-            <span>Gloria</span>
-          </a>
+          <div class="brand">
+            <button class="theme-toggle" type="button" role="switch" aria-checked="false" aria-label="Dark theme" title="Switch theme">
+              <span class="theme-thumb" aria-hidden="true">
+                <i class="fa-solid fa-sun thumb-sun"></i>
+                <i class="fa-solid fa-moon thumb-moon"></i>
+              </span>
+            </button>
+            <a href="#home">Gloria</a>
+          </div>
 
           <nav class="site-nav" aria-label="Portfolio">
             <a href="#work"><i class="fa-solid fa-briefcase" aria-hidden="true"></i>Work</a>

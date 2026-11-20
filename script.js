@@ -130,3 +130,27 @@
     });
   }
 })();
+
+
+
+/* Theme toggle: pink by default, silver (dark) optional, remembered */
+(() => {
+  const root = document.documentElement;
+  const btn = document.querySelector(".theme-toggle");
+  if (!btn) return;
+
+  let dark = root.dataset.theme === "silver";
+
+  function apply() {
+    if (dark) root.dataset.theme = "silver";
+    else delete root.dataset.theme;
+    btn.setAttribute("aria-checked", String(dark));
+  }
+  apply();
+
+  btn.addEventListener("click", () => {
+    dark = !dark;
+    apply();
+    try { localStorage.setItem("theme", dark ? "silver" : "pink"); } catch (e) {}
+  });
+})();
