@@ -1,0 +1,449 @@
+<!doctype html>
+
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Gloria Tetchouang, a second-year Software Engineering student in Ottawa seeking a Winter 2027 co-op. Front-end, Shopify, and Android projects.">
+
+    <title>Gloria Tetchouang | Portfolio</title>
+
+    <script>document.documentElement.classList.add("js");</script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+  </head>
+
+
+  <body>
+
+    <main>
+      <div class="stage">
+
+        <span class="bubble bubble-1" aria-hidden="true"></span>
+        <span class="bubble bubble-2" aria-hidden="true"></span>
+        <span class="bubble bubble-3" aria-hidden="true"></span>
+
+        <header class="site-header">
+          <a class="brand" href="#home" aria-label="Gloria, home">
+            <span class="brand-mark" aria-hidden="true">GT</span>
+            <span>Gloria</span>
+          </a>
+
+          <nav class="site-nav" aria-label="Portfolio">
+            <a href="#work"><i class="fa-solid fa-briefcase" aria-hidden="true"></i>Work</a>
+            <a href="#about"><i class="fa-solid fa-user" aria-hidden="true"></i>About</a>
+            <a href="#contact"><i class="fa-solid fa-envelope" aria-hidden="true"></i>Contact</a>
+          </nav>
+
+          <span class="availability"><span class="status-dot" aria-hidden="true"></span>Co-op Winter 2027</span>
+        </header>
+
+        <section id="home" class="hero" aria-labelledby="hero-title">
+          <div class="hero-copy">
+            <p class="eyebrow">Hello, I’m</p>
+            <h1 id="hero-title">Gloria <span>Tetchouang</span></h1>
+            <p class="hero-description">2nd-year Software Engineering student with a front-end foundation, 
+              now strengthening my back-end skills.</p>
+
+            <ul class="hero-facts" aria-label="Quick facts">
+              <li><i class="fa-solid fa-location-dot" aria-hidden="true"></i>Ottawa, Canada</li>
+              <li><i class="fa-solid fa-language" aria-hidden="true"></i>English &amp; French</li>
+              <li><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>University of Ottawa</li>
+            </ul>
+
+
+            <div class="hero-actions">
+              <a class="button button-primary" href="#work">Explore my work <i class="fa-solid fa-circle-arrow-right" aria-hidden="true"></i></a>
+              <a class="button button-secondary" href="Gloria_Tetchouang_Resume.pdf" download target="_blank">Download résumé <i class="fa-solid fa-circle-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <canvas class="butterfly-canvas" aria-hidden="true"></canvas>
+            <figure class="portrait">
+              <div class="portrait-glass">
+                <img class="portrait-photo" src="images\portrait.jpeg" alt="Gloria Tetchouang">
+              </div>
+
+              <span class="butterfly butterfly-main" aria-hidden="true">
+                <span class="wing wing-upper wing-left"></span><span class="wing wing-upper wing-right"></span>
+                <span class="wing wing-lower wing-left"></span><span class="wing wing-lower wing-right"></span>
+                <span class="butterfly-body"></span>
+              </span>
+              <span class="butterfly butterfly-small" aria-hidden="true">
+                <span class="wing wing-upper wing-left"></span><span class="wing wing-upper wing-right"></span>
+                <span class="wing wing-lower wing-left"></span><span class="wing wing-lower wing-right"></span>
+                <span class="butterfly-body"></span>
+              </span>
+            </figure>
+          </div>
+        </section>
+        
+      </div>
+      
+
+      <section id="work" class="work" aria-labelledby="work-title">
+        <header class="work-heading">
+          <div>
+            <p class="work-label">01 · Selected work</p>
+            <h2 id="work-title">Things I’ve <span>made.</span></h2>
+          </div>
+          <p>A growing collection of web, mobile, and engineering projects.</p>
+        </header>
+
+        <div class="work-grid">
+
+          <article class="project project-featured">
+
+            <div class="project-preview preview-fred">
+              <span class="preview-label">Agri-tech platform</span>
+
+              <div class="window">
+
+                <div class="window-bar">
+                  <span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                  <span class="window-title">fredai.ca</span>
+                </div>
+
+                <div class="window-screen">
+                  <img class="window-img" src="images/fred.png" alt="Homepage of the FRED Marketplace redesign" loading="lazy">
+                </div>
+
+              </div>
+
+            </div>
+
+            <div class="project-info">
+              <div>
+                <p class="work-label">Featured · Front-end development</p>
+                <h3>FRED Platform</h3>
+                <p class="project-role"><strong>My role:</strong> Front-end developer. I worked within the sage-green brand design system and managed changes through Git and GitHub.</p>
+              </div>
+              <p class="project-description">An agri-tech platform connecting Canadian farmers with buyers, investors, and 
+                research partners. I built several of its interactive sections: a Past Webinars modal, a LinkedIn posts feed, 
+                an FAQ accordion, and a full contact page.</p>
+              <ul class="project-tags" aria-label="Project topics">
+                <li>HTML</li><li>CSS</li><li>JavaScript</li><li>Git &amp; GitHub</li><li>Design system</li><li>Figma</li>
+              </ul>
+              <a class="project-link" href="https://www.fredai.ca" target="_blank" rel="noopener">Visit the site <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-preview preview-myai">
+              <span class="preview-label">AI and digital services</span>
+
+              <div class="window">
+                <div class="window-bar">
+                  <span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                  <span class="window-title">myaipathway.org</span>
+                </div>
+                <div class="window-screen">
+                  <img class="window-img" src="images/pathway.png" alt="Homepage of the redesigned MyAIPathway website, an AI and digital services company in Ottawa" loading="lazy">
+                </div>
+              </div>
+            </div>
+
+            <div class="project-info">
+              <p class="work-label">Featured · Website redesign</p>
+              <h3>MyAIPathway</h3>
+              <p class="project-description">The public website of an AI and digital services company in Ottawa. 
+                I led the full redesign, restructuring the service pages, navigation, and layout to improve usability 
+                and visual consistency.</p>
+              <ul class="project-tags" aria-label="Project topics">
+                <li>HTML</li><li>CSS</li><li>JavaScript</li><li>UI design</li><li>Responsive</li>
+              </ul>
+              <a class="project-link" href="https://www.myaipathway.org" target="_blank" rel="noopener">Visit the site <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-preview preview-portfolio">
+              <span class="preview-label">Personal site</span>
+
+              <div class="window">
+                <div class="window-bar">
+                  <span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                  <span class="window-title">This portfolio</span>
+                </div>
+                <div class="window-screen">
+                  <img class="window-img" src="images/portfolio.png" alt="Screenshot of the portfolio website" loading="lazy">
+                </div>
+              </div>
+
+            </div>
+
+            <div class="project-info">
+              <p class="work-label">Featured · Design and front-end development</p>
+              <h3>This portfolio</h3>
+              <p class="project-description">A responsive portfolio designed and coded from scratch. It features a glassmorphism layout,
+                 3D butterflies animated with three.js, scroll-triggered reveals, and an interactive avatar who types code, 
+                 follows the cursor, and comments on each section.
+              </p>
+
+              <ul class="project-tags" aria-label="Project topics">
+                <li>HTML</li><li>CSS</li><li>JavaScript</li><li>three.js</li><li>Figma</li>
+              </ul>
+              <a class="project-link" href="https://github.com/ZyraLein/YOUR-REPO-NAME" target="_blank" rel="noopener">View on GitHub <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-preview preview-studyhub" aria-hidden="true">
+              <span class="preview-label">Academic organization</span>
+              <span class="badge-progress">In progress</span>
+              <div class="mock-browser">
+                <div class="mock-bar"></div>
+                <div class="mock-content"><span></span><span></span></div>
+                <div class="mock-tiles"><span></span><span></span><span></span></div>
+              </div>
+            </div>
+
+            <div class="project-info">
+              <p class="work-label">Android team project · SEG2105</p>
+              <h3>StudyHub</h3>
+              <p class="project-description">An Android app designed to help students manage coursework and find study groups, currently being built by a team of students.</p>
+              <ul class="project-tags" aria-label="Project topics">
+                <li>Android</li><li>Kotlin</li><li>Team project</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-preview preview-plow" aria-hidden="true">
+              <span class="preview-label">Accessible winter mobility</span>
+              <span class="badge-progress">In progress</span>
+              <div class="mock-browser">
+                <div class="mock-bar"></div>
+                <div class="mock-content"><span></span><span></span></div>
+                <div class="mock-tiles"><span></span><span></span><span></span></div>
+              </div>
+            </div>
+
+            <div class="project-info">
+              <p class="work-label">Engineering design · GNG2101</p>
+              <h3>Wheelchair Sidewalk Plow</h3>
+              <p class="project-description">A wheelchair-mounted retractable V-plow with a salt dispenser, designed so a power wheelchair user can clear their own path in winter.</p>
+              <ul class="project-tags" aria-label="Project topics">
+                <li>Accessibility</li><li>Design team</li><li>Prototyping</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="experience" class="portfolio-section experience" aria-labelledby="experience-title">
+        <header class="section-heading">
+          <p class="section-label">02 · Experience</p>
+          <h2 id="experience-title">Learning by <span>doing.</span></h2>
+        </header>
+
+        <article class="experience-row">
+          <div>
+            <p class="experience-category">Front-end &amp; marketing</p>
+            <p class="experience-date">Jul 2025 - Present</p>
+          </div>
+          <div>
+            <p class="section-label">Techity Consulting · Remote</p>
+            <h3>Front-End Developer &amp; Digital Marketing Associate</h3>
+            <p>I build and maintain the company's Shopify storefront with custom Liquid components and a Cal.com booking integration. I also run email automation and newsletter campaigns, and report on their performance with Google Analytics and GoHighLevel.</p>
+          </div>
+          <ul class="project-tags" aria-label="Tools and skills">
+            <li>Shopify Liquid</li><li>Cal.com</li><li>Flodesk</li><li>Google Analytics</li>
+          </ul>
+        </article>
+
+        <article class="experience-row">
+          <div>
+            <p class="experience-category">Front end</p>
+            <p class="experience-date">May 2025 - Present</p>
+          </div>
+          <div>
+            <p class="section-label">MyAIPathway · Volunteer</p>
+            <h3>Front-End Developer</h3>
+            <p>I redesigned two production websites, fredai.ca and myaipathway.org, improving navigation, content hierarchy, and mobile responsiveness. I also produced UML diagrams to document system workflows for the development team.</p>
+          </div>
+          <ul class="project-tags" aria-label="Tools and skills">
+            <li>HTML/CSS</li><li>JavaScript</li><li>UML</li><li>Git</li>
+          </ul>
+        </article>
+      </section>
+
+      <section id="community" class="portfolio-section experience" aria-labelledby="community-title">
+        <header class="section-heading">
+          <p class="section-label">03 · Extracurricular &amp; volunteering</p>
+          <h2 id="community-title">Showing up for <span>my community.</span></h2>
+        </header>
+
+        <article class="experience-row">
+          <div>
+            <p class="experience-category">Competition committee</p>
+            <p class="experience-date">Aug 2026 - Present</p>
+          </div>
+          <div>
+            <h3>Communications Director</h3>
+            <p>I led communications for UOEC 2026, building the brand identity and the Instagram and LinkedIn content plan. I wrote bilingual (EN/FR) captions and video scripts across all 9 competition categories.</p>
+          </div>
+          <a class="organization-link" href="https://competition.essaeg.ca/" target="_blank" rel="noopener">
+            uOttawa Engineering Competition <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+          </a>
+        </article>
+
+        <article class="experience-row">
+          <div>
+            <p class="experience-category">Youth mentorship</p>
+            <p class="experience-date">Sep 2026 - Present</p>
+          </div>
+          <div>
+            <h3>Assistant STEM Instructor</h3>
+            <p>I support the lead instructor in a bi-monthly Saturday STEM and robotics workshop series for Black youth at the University of Ottawa, helping participants build confidence through hands-on projects.</p>
+          </div>
+          <a class="organization-link" href="https://blackboyscode.ca/" target="_blank" rel="noopener">
+            Black Boys Code <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+          </a>
+        </article>
+
+        <article class="experience-row">
+          <div>
+            <p class="experience-category">STEM education</p>
+            <p class="experience-date">Sep 2026 - Present</p>
+          </div>
+          <div>
+            <h3>Assistant STEM Instructor</h3>
+            <p>I support the CTRL-Clique Girls class (ages 8 to 17), guiding participants one-on-one through Python exercises and explaining concepts at their level.</p>
+          </div>
+          <a class="organization-link" href="https://www.colourfully.digital/" target="_blank" rel="noopener">
+            Colourfully Digital <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+          </a>
+        </article>
+      </section>
+
+      <section id="about" class="portfolio-section about-panel" aria-labelledby="about-title">
+        <header class="section-heading">
+          <p class="section-label">04 · About</p>
+          <h2 id="about-title">
+            Curious mind.<br>
+            <span>Thoughtful<br> builder.</span>
+          </h2>
+        </header>
+
+        <div class="about-copy">
+          <p class="about-intro">
+            I'm a bilingual, second-year Software Engineering student at the University of Ottawa. I build websites and apps, and I enjoy both the design side and the code side of a project.
+          </p>
+          <p>
+            I'm looking for a Winter 2027 co-op in software, web, or IT, where I can contribute to a team and keep strengthening my back-end skills.
+          </p>
+          <ul class="about-skills" aria-label="Skills">
+            <li>Python</li>
+            <li>Java</li>
+            <li>JavaScript</li>
+            <li>HTML / CSS</li>
+            <li>Kotlin (learning)</li>
+            <li>Git &amp; GitHub</li>
+            <li>Figma</li>
+            <li>Shopify Liquid</li>
+          </ul>
+        </div>
+      </section>
+
+
+      <section id="contact" class="portfolio-section contact-panel" aria-labelledby="contact-title">
+        <header class="section-heading">
+          <p class="section-label">05 · Contact</p>
+          <h2 id="contact-title">
+            Let’s make<br>
+            something<br>
+            <span>lovely and useful.</span>
+          </h2>
+        </header>
+
+        <p class="contact-intro">
+          Have a Winter 2027 co-op opportunity, a project in mind, or just want to say hello?
+        </p>
+
+        <a class="contact-email" href="mailto:gtetc031@uottawa.ca">
+          gtetc031@uottawa.ca<span aria-hidden="true">↗</span>
+        </a>
+
+        <div class="contact-links">
+          <a href="https://www.linkedin.com/in/gloria-laetitia-tetchouang-lonkou-software-engineer/" target="_blank">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M20.5 2h-17A1.5 1.5 0 0 0 2 3.5v17A1.5 1.5 0 0 0 3.5 22h17a1.5 1.5 0 0 0 1.5-1.5v-17A1.5 1.5 0 0 0 20.5 2ZM8 19H5V9h3v10ZM6.5 7.75a1.75 1.75 0 1 1 0-3.5 1.75 1.75 0 0 1 0 3.5ZM19 19h-3v-5.2c0-2.8-3-2.6-3 0V19h-3V9h3v1.4c1.4-2.5 6-2.7 6 2.4V19Z"/>
+            </svg>
+            LinkedIn
+            <i class="fa-solid fa-circle-arrow-right contact-arrow" aria-hidden="true"></i>
+          </a>
+
+          <a href="https://github.com/ZyraLein" target="_blank">
+            <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+              <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38l-.01-1.49c-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48l-.01 2.19c0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/>
+            </svg>
+            GitHub
+            <i class="fa-solid fa-circle-arrow-right contact-arrow" aria-hidden="true"></i>
+          </a>
+
+          <a href="Gloria_Tetchouang_Resume.pdf" download target="_blank" aria-label="Download résumé PDF">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <path d="M14 2v6h6M8 13h8M8 17h6"/>
+            </svg>
+            Résumé
+            <i class="fa-solid fa-download contact-arrow" aria-hidden="true"></i>
+          </a>
+        </div>
+      </section>
+
+
+    </main>
+
+    <footer class="portfolio-section portfolio-footer">
+      <span>© 2026 Gloria Tetchouang</span>
+      <span><i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i>Pastel dreams, working code.</span>
+    </footer>
+
+    <details class="avatar" data-mood="happy" open>
+
+      <summary aria-label="Toggle the portfolio avatar">
+        <span class="avatar-minus" aria-hidden="true">−</span>
+        <span class="avatar-plus" aria-hidden="true">+</span>
+      </summary>
+
+      <p class="avatar-bubble" aria-hidden="true"></p>
+
+      <div class="avatar-art" aria-hidden="true">
+        <span class="avatar-code"></span>
+        <span class="avatar-shadow"></span>
+        <span class="avatar-hair"></span>
+        <span class="avatar-dress"></span>
+        <span class="avatar-neck"></span>
+        <span class="avatar-face">
+          <span class="avatar-eye eye-left"></span><span class="avatar-eye eye-right"></span>
+          <span class="avatar-blush blush-left"></span><span class="avatar-blush blush-right"></span>
+          <span class="avatar-smile"></span>
+        </span>
+        <span class="avatar-fringe"></span>
+        <span class="avatar-bow"><span></span></span>
+        <span class="avatar-keyboard"></span>
+        <span class="avatar-arm arm-left"></span>
+        <span class="avatar-arm arm-right"></span>
+      </div>
+
+    </details>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+    <script src="butterflies.js" defer></script>
+    <script src="script.js" defer></script>
+
+  </body>
+
+</html>
